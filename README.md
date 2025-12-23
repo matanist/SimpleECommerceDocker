@@ -21,7 +21,7 @@ docker compose up -d
 # http://localhost:5000/swagger
 ```
 
-İlk başlatmada build işlemi birkaç dakika sürebilir. Sonraki başlatmalar çok daha hızlı olacaktır.
+İlk başlatmada image'ların indirilmesi birkaç dakika sürebilir. Sonraki başlatmalar çok daha hızlı olacaktır.
 
 > ✅ **Platform Uyumluluğu:** Bu proje hem **Windows/Linux (x86_64)** hem de **macOS Apple Silicon (M1/M2/M3)** üzerinde çalışır.
 
