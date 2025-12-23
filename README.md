@@ -18,7 +18,7 @@ cd SimpleECommerceDocker
 docker compose up -d
 
 # 3. Tarayıcıda açın
-# http://localhost:5000/swagger
+# http://localhost:5001/swagger
 ```
 
 İlk başlatmada image'ların indirilmesi birkaç dakika sürebilir. Sonraki başlatmalar çok daha hızlı olacaktır.
@@ -88,7 +88,7 @@ docker compose up -d
 ### 1. Giriş Yapma
 
 ```bash
-curl -X POST http://localhost:5000/api/auth/login \
+curl -X POST http://localhost:5001/api/auth/login \
   -H "Content-Type: application/json" \
   -d '{"email":"admin@simpleecommerce.com","password":"Admin123!"}'
 ```
@@ -96,13 +96,13 @@ curl -X POST http://localhost:5000/api/auth/login \
 ### 2. Ürünleri Listeleme
 
 ```bash
-curl http://localhost:5000/api/products
+curl http://localhost:5001/api/products
 ```
 
 ### 3. Sipariş Oluşturma (Token gerekli)
 
 ```bash
-curl -X POST http://localhost:5000/api/orders \
+curl -X POST http://localhost:5001/api/orders \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer YOUR_TOKEN" \
   -d '{"items":[{"productId":1,"quantity":2}]}'
