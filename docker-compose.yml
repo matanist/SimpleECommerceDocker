@@ -12,8 +12,7 @@ services:
       - Jwt__Audience=SimpleECommerceUsers
       - Jwt__ExpirationHours=24
     depends_on:
-      sqlserver:
-        condition: service_healthy
+      - sqlserver
     networks:
       - simpleecommerce-network
     restart: unless-stopped
@@ -31,12 +30,6 @@ services:
       - sqlserver-data:/var/opt/mssql
     networks:
       - simpleecommerce-network
-    healthcheck:
-      test: ["CMD-SHELL", "cat < /dev/null > /dev/tcp/localhost/1433 || exit 1"]
-      interval: 10s
-      timeout: 5s
-      retries: 20
-      start_period: 60s
     restart: unless-stopped
 
 networks:
