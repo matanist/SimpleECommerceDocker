@@ -1,6 +1,6 @@
 services:
   api:
-    image: ghcr.io/matanist/simpleecommerce-api:latest
+    image: matanist/simpleecommerce-api:latest
     container_name: simpleecommerce-api
     ports:
       - "5001:8080"
